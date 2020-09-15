@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 - Студент: [Арсений Зубов](https://up.htmlacademy.ru/htmlcss/29/user/1343007).
-- Наставник: [Сергей Остаповец].
+- Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
