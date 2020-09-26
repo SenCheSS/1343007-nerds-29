@@ -3,26 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Нёрдс</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <header>
-      <nav class="nav">
-        <!--Лого-->
-        <a class="logo" aria-label="Логотип компании Нёрдс"
-          ><img src="" alt="Логотип компании Нёрдс"
-        /></a>
+      <!--Лого-->
+      <a class="logo" aria-label="Логотип компании Нёрдс">
+        <img
+          src="img/header/nerds-logo.svg"
+          height="65"
+          width="160"
+          alt="Логотип компании Нёрдс"
+      /></a>
+      <nav class="nav container">
         <!--Меню-->
         <ul class="menu">
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="catalog.html" class="current">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <!--Пользовательское меню-->
         <ul class="bin">
           <li>
-            <a href=""> <img src="" alt="Корзина" />Корзина</a>
+            <a href="#">
+              <img
+                src="img/header/cart-icon.svg"
+                height="11"
+                width="15"
+                alt="Корзина"
+              />Корзина</a
+            >
           </li>
         </ul>
       </nav>
@@ -32,6 +52,98 @@
       <h1>Магазин готовых шаблонов</h1>
       <!--Содержимое кталога-->
       <section class="catalog">
+        <!--Контент слева-->
+        <form action="#" class="form" method="get">
+          <!--Стоимость-->
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <ul>
+              <!--Поле-->
+              <li>
+                <!--Изменение стоимости-->
+                <div class="price-control">
+                  <ul>
+                    <li>
+                      <label for="before">От</label>
+                      <input
+                        type="number"
+                        name="price"
+                        id="before"
+                        placeholder="0"
+                      />
+                    </li>
+                    <li>
+                      <label for="to">До</label>
+                      <input
+                        type="number"
+                        name="price"
+                        id="to"
+                        placeholder="15000"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <!--Сетка-->
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  name="grid"
+                  id="adaptive"
+                  value="apative"
+                  checked
+                />
+                <label for="adaptive">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" name="grid" id="fixed" value="fixed" />
+                <label for="fixed">Фиксированная</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="grid"
+                  id="responsive"
+                  value="responsive"
+                />
+                <label for="responsive">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <!--Особенности-->
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" id="slider" value="slider" checked />
+                <label for="slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" id="benefits" value="benefits" />
+                <label for="benefits">Блок преимущест></label>
+              </li>
+              <li>
+                <input type="checkbox" id="news" value="news" checked />
+                <label for="news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" id="gallery" value="gallery" />
+                <label for="gallery">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" id="bin" value="bin" />
+                <label for="bin">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">ПОКАЗАТЬ</button>
+        </form>
+        <!--Контент Справа-->
         <div class="content">
           <!--Сортировка-->
           <div class="sort">
@@ -47,8 +159,20 @@
             <!--Каталог товара-->
             <li class="product">
               <a href="#">
-                <img src="" alt="Рамка" />
-                <img src="" alt="Сайт Sedona" />
+                <img
+                  src="img/main_catalog/browser.svg"
+                  height="40"
+                  width="360"
+                  alt="Рамка"
+                  class="product-window"
+                />
+                <img
+                  src="img/main_catalog/product_sedona.png"
+                  height="576"
+                  width="360"
+                  alt="Сайт Sedona"
+                  class="product-preview"
+                />
                 <div class="product-desc">
                   <h3>Sedona</h3>
                   <p>Информационный сайт для туристов</p>
@@ -58,8 +182,20 @@
             </li>
             <li class="product">
               <a href="#">
-                <img src="" alt="Рамка" />
-                <img src="" alt="Сайт Pink" />
+                <img
+                  src="img/main_catalog/browser.svg"
+                  height="40"
+                  width="360"
+                  alt="Рамка"
+                  class="product-window"
+                />
+                <img
+                  src="img/main_catalog/product_pink.png"
+                  height="576"
+                  width="358"
+                  alt="Сайт Pink"
+                  class="product-preview"
+                />
                 <div class="product-desc">
                   <h3>Pink App</h3>
                   <p>Продуктовый лендинг приложения для iOS и Android</p>
@@ -69,8 +205,20 @@
             </li>
             <li class="product">
               <a href="#">
-                <img src="" alt="Рамка" />
-                <img src="" alt="Сайт Borodinsky" />
+                <img
+                  src="img/main_catalog/browser.svg"
+                  height="40"
+                  width="360"
+                  alt="Рамка"
+                  class="product-window"
+                />
+                <img
+                  src="img/main_catalog/product_borodinsky.png"
+                  height="582"
+                  width="364"
+                  alt="Сайт Borodinsky"
+                  class="product-preview"
+                />
                 <div class="product-desc">
                   <h3>Barbershop</h3>
                   <p>Сайт салона красоты. Для мужчин, да.</p>
@@ -80,8 +228,20 @@
             </li>
             <li class="product">
               <a href="#">
-                <img src="" alt="Рамка" />
-                <img src="" alt="Сайт Mishka" />
+                <img
+                  src="img/main_catalog/browser.svg"
+                  height="40"
+                  width="360"
+                  alt="Рамка"
+                  class="product-window"
+                />
+                <img
+                  src="img/main_catalog/product_mishka.png"
+                  height="580"
+                  width="362"
+                  alt="Сайт Mishka"
+                  class="product-preview"
+                />
                 <div class="product-desc">
                   <h3>MISHKA</h3>
                   <p>Интернет-магазин вязаных игрушек</p>
@@ -91,8 +251,20 @@
             </li>
             <li class="product">
               <a href="#">
-                <img src="" alt="Рамка" />
-                <img src="" alt="Сайт A+" />
+                <img
+                  src="img/main_catalog/browser.svg"
+                  height="40"
+                  width="360"
+                  alt="Рамка"
+                  class="product-window"
+                />
+                <img
+                  src="img/main_catalog/product_a_plus.png"
+                  height="582"
+                  width="364"
+                  alt="Сайт A+"
+                  class="product-preview"
+                />
                 <div class="product-desc">
                   <h3>A Plus</h3>
                   <p>Лендинг курсов повышения квалификации</p>
@@ -102,8 +274,20 @@
             </li>
             <li class="product">
               <a href="#">
-                <img src="" alt="Рамка" />
-                <img src="" alt="Сайт Кваст" />
+                <img
+                  src="img/main_catalog/browser.svg"
+                  height="40"
+                  width="360"
+                  alt="Рамка"
+                  class="product-window"
+                />
+                <img
+                  src="img/main_catalog/product_kvast.png"
+                  height="580"
+                  width="362"
+                  alt="Сайт Кваст"
+                  class="product-preview"
+                />
                 <div class="product-desc">
                   <h3>КВАСТ</h3>
                   <p>Промо-сайт производителя крафтового кваса</p>
@@ -114,10 +298,10 @@
           </ul>
           <!--Лагинация-->
           <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">Следующая</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>Следующая</a></li>
           </ul>
         </div>
       </section>
@@ -136,7 +320,12 @@
             <a href="tel.+7(812)2757575" class="tel">+7(812)275-75-75</a>
           </p>
           <a href="#" class="button">НАПИШИТЕ НАМ</a>
-          <img src="" alt="Напишите нам" />
+          <img
+            src="img/footer/map.png"
+            width="1440"
+            height="416"
+            alt="Напишите нам"
+          />
         </div>
       </div>
       <!--Bottom-->
@@ -144,15 +333,17 @@
         <ul class="social">
           <li>
             <a href="#" aria-label="Вконтакте"
-              ><img src="" alt="Вконтакте"
+              ><img src="img/footer/vk-icon.svg" alt="Вконтакте"
             /></a>
           </li>
           <li>
-            <a href="#" aria-label="Facebook"><img src="" alt="Facebook" /></a>
+            <a href="#" aria-label="Facebook"
+              ><img src="img/footer/fb-icon.svg" alt="Facebook"
+            /></a>
           </li>
           <li>
             <a href="#" aria-label="Instagram"
-              ><img src="" alt="Instagram"
+              ><img src="img/footer/insta-icon.svg" alt="Instagram"
             /></a>
           </li>
         </ul>
@@ -164,6 +355,43 @@
     </footer>
     <section class="call-us">
       <!--Здесь будет пупап-- Напишите нам -->
+      <div class="call-us_header">
+        <h2>Напишите нам</h2>
+        <button class="exit" aria-label="Закрыть">
+          <img src="img/pup/close-cross.svg" alt="Закрыть" />
+        </button>
+      </div>
+      <form action="#" method="post">
+        <ul>
+          <li>
+            <label for="login">Ваше имя:</label>
+            <input
+              id="login"
+              type="text"
+              name="login"
+              placeholder="Имя Фамилия"
+            />
+          </li>
+          <li>
+            <label for="email">Ваш email:</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+            />
+          </li>
+          <li>
+            <label for="message">Текст письма:</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="В свободной форме"
+            ></textarea>
+          </li>
+        </ul>
+        <button type="submit">Отправить</button>
+      </form>
     </section>
   </body>
 </html>
